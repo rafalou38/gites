@@ -1,0 +1,217 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Icon } from 'astro-icon/components'
+---
+
+<Layout title="Welcome to Astro.">
+  <main>
+    <img src="/public/yana.png" alt="" />
+    <section id="banner">
+      <div id="banner_wrapper">
+        <p id="banner__text">
+          Prix à la semaine <br />
+          <strong>1350€ - 2650€ </strong>
+        </p>
+        <div id="reserver">
+          <button id="reserver__btn">Reserver</button>
+          <p id="reserver__sous-text">
+            Prochaine disponibilité <br />
+            le <strong>15/04</strong>
+          </p>
+        </div>
+      </div>
+    </section>
+    <section id="cards">
+      <div class="card">
+        <img src="/public/icons/person.png" alt="" />
+        <p><strong>10</strong> personnes</p>
+      </div>
+      <div class="card">
+        <img src="/public/icons/bed.png" alt="" />
+        <p><strong>4</strong> chambres</p>
+      </div>
+      <div class="card">
+        <img src="/public/icons/shower.png" alt="" />
+        <p><strong>3</strong> SDB</p>
+      </div>
+      <div class="card">
+        <img src="/public/icons/triangle.png" alt="" />
+        <p><strong>170m²</strong></p>
+      </div>
+      <div class="card">
+        <img src="/public/icons/car.png" alt="" />
+        <p>Parking gratuit</p>
+      </div>
+      <div class="card">
+        <img src="/public/icons/house.png" alt="" />
+        <p>Maison <strong>individuelle</strong></p>
+      </div>
+      <div class="card">
+        <img src="/public/icons/swim.png" alt="" />
+        <p>piscine couverte <strong>5.5mx11.5m</strong></p>
+      </div>
+      <div class="card">
+        <img src="/public/icons/cold.png" alt="" />
+        <p><strong>Climatisation</strong></p>
+      </div>
+      <div class="card">
+        <img src="/public/icons/wifi.png" alt="" />
+        <p>Wifi <strong>gratuit</strong></p>
+      </div>
+    </section>
+    <section id="description">
+      <p>
+        En campagne à 6 kms d'Arles, sur 4000 m² de terrain entièrement clôturé,
+        belle villa de plain pied avec grand espace gazon planté d'oliviers, une
+        piscine couverte et chauffée de 11.5x5.5m et un hammam dans la maison.
+      </p>
+      <p>
+        Vaste séjour/salle à manger et coin salon avec canapés confortables,
+        télévision écran plat/lecteur DVD, espace repas. Cuisine indépendante
+        ouvrant sur la terrasse, avec équipement intégré : gazinière 5 feux,
+        lave vaisselle, four, micro ondes, frigo/congélateur, petit
+        électroménager, nombreux rangements.
+      </p>
+      <p>
+        Trois chambres disposent de leur sanitaire privatif (douche et lavabo),
+        la chambre parentale disposant quant à elle d'une vaste salle de bain
+        avec baignoire d'angle et douche. 1 chambre avec lit 180x210, 1 chambre
+        avec lit 140x190, une chambre avec 3 lits simples en 90x200 dont 2
+        jumelables. 2 Wc indépendants. Chambre avec lit 1 personne(160x200) et
+        convertible 2 personnes, et accès au hammam.
+      </p>
+      <p>
+        Barbecue - Buanderie avec lave linge et sèche linge - Garage et abri
+        couvert 2 voitures - wi-fi - climatisation réversible (inclus) - draps
+        et linge inclus - ménage en supplément - trampoline, balançoire et
+        panier de basket- équipement de fitness sur la mezzanine au dessus de la
+        salle à manger - Lit et chaise bébé.
+      </p>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  img {
+    width: 100%;
+    height: calc(100vh - 100px); /*- 280px); */
+    object-fit: cover;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    font-size: 36px;
+  }
+  #cards {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 64px;
+    gap: 20px;
+  }
+  .card {
+    flex-grow: 1;
+    border-radius: 32px;
+    box-sizing: border-box;
+    width: 260px;
+    padding: 45px;
+    display: grid;
+    place-items: center;
+    background: rgb(232, 233, 231);
+    color: #4b5148;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.14));
+    transition: all 0.2s ease;
+  }
+  .card:hover {
+    transform: translate(-2px, -2px);
+    filter: drop-shadow(4px 4px 2px rgba(0, 0, 0, 0.14));
+  }
+  .card img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    filter: invert(29%) sepia(21%) saturate(177%) hue-rotate(56deg)
+      brightness(98%) contrast(95%);
+  }
+  .card p {
+    text-align: center;
+    margin-top: 16px;
+    margin-bottom: 8px;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  .card strong {
+    font-weight: 900;
+  }
+
+  #banner {
+    height: 280px;
+    background-color: #454b41;
+  }
+  #banner_wrapper {
+    height: 100%;
+    max-width: 1340px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #banner__text {
+    text-align: center;
+  }
+
+  #reserver {
+    width: min-content;
+  }
+  #reserver__btn {
+    position: relative;
+    background: linear-gradient(90deg, #ffffff 0%, #ffffff 100%);
+    background-size: 100%;
+    background-position: -268px;
+    background-repeat: no-repeat;
+
+    color: white;
+    font-weight: 500;
+    border: 3px solid white;
+    border-radius: 100px;
+    padding: 24px 64px;
+    font-size: 32px;
+    cursor: pointer;
+
+    transition: all 0.3s ease-out;
+  }
+
+  #reserver__btn:hover {
+    background-position: 0;
+    color: black;
+  }
+  #reserver__btn:active {
+    transform: scale(0.9);
+  }
+
+  #reserver__sous-text {
+    text-align: center;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 14px;
+    margin-bottom: 0;
+  }
+  strong {
+    font-weight: 700;
+  }
+
+  #description {
+    color: black;
+    max-width: 1340px;
+    margin: 0 auto;
+    margin-top: 100px;
+    text-align: justify;
+    font-size: 36px;
+  }
+</style>
